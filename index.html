@@ -162,6 +162,8 @@
 
             // Пользователь нажал отмена для окна с добавлением информации
             $("#reportInfoBoxCancelIconBtn, #reportInfoBoxCancelBtn").on("click", function(e) {
+                e.preventDefault();
+
                 map.removeLayer(marker);        // Удаляем маркер, если он был добавлен на карту
                 $("#reportInfoModal").hide();   // Прячем панель с добавлением информации о метке
                 $("#topPanel").show();          // Восстанавливаем верхнюю панель
@@ -213,7 +215,7 @@
         <input type="button" class="cancel-btn btn-rounded" id="reportInfoBoxCancelIconBtn" value="" />
 <!--        <input type="button" class="btn-rounded check-btn" id="reportInfoBoxSendReport" value="" />-->
         <div class="clear"></div>
-        <form name="" method="post" enctype="multipart/form-data" action="" onsubmit="return false;">
+        <form name="" method="post" enctype="multipart/form-data">
             <div>
                 <div class="radiobox">
                     <input type="radio" id="sun" name="radio"/>
