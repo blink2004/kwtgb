@@ -131,7 +131,7 @@ body {
 
 #addNewMarkerBtn {
     margin: auto;
-    margin-right: calc(100vw - 370px) !important;
+    /*margin-right: calc(100vw - 370px) !important;*/
     background: url("assets/add.png") center no-repeat white;
 }
 
@@ -184,9 +184,11 @@ body {
 .font-red {
     color: red;
 }
+
 .font-green {
     color: green;
 }
+
 .font-normal {
     color: #333333;
 }
@@ -198,9 +200,9 @@ body {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: radial-gradient(farthest-side,#474bff 94%,#0000) top/9px 9px no-repeat,
-    conic-gradient(#0000 30%,#474bff);
-    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+    background: radial-gradient(farthest-side, #474bff 94%, #0000) top/9px 9px no-repeat,
+    conic-gradient(#0000 30%, #474bff);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
     animation: spinner-c7wet2 1s infinite linear;
     z-index: 9999;
 }
@@ -249,6 +251,11 @@ body {
     z-index: 401;
 }
 
+.modal-window {
+    background: var(--tg-theme-bg-color);
+    color: var(--tg-theme-text-color);
+}
+
 .modal-window .cancel-btn {
     float: right;
     margin-top: 10px;
@@ -258,6 +265,7 @@ body {
 #selectedMarkerTypeDesc {
     margin-top: 10px;
     content: " ";
+    color: var(--tg-theme-text-color);
 }
 
 #setMapMarkerHint {
@@ -270,6 +278,7 @@ body {
 }
 
 .h2 {
+    color: var(--tg-theme-header-bg-color);
     font-size: 1.3em;
 }
 
