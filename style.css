@@ -1,0 +1,337 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Custom CSS*/
+body {
+    /*font: sans-serif, verdana, arial;*/
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #444;
+}
+
+#map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#preloader {
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 9998;
+}
+
+#preloader img {
+    margin-left: calc(100vw / 2 - 50px) !important;
+    margin-top: calc(100vh / 2 - 36px) !important;
+    width: 100px;
+    height: 72px;
+}
+
+#topPanel {
+    position: absolute;
+    right: 0;
+    width: 120px;
+    height: 52px;
+    padding-top: 10px;
+    padding-right: 20px;
+    z-index: 400;
+}
+
+.btn-rounded {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    opacity: 0.6;
+}
+
+.btn-ok {
+    background-color: #007bff;
+}
+
+#addNewMarkerBtn {
+    margin: auto;
+    margin-right: calc(100vw - 370px) !important;
+    background: url("assets/add.png") center no-repeat white;
+}
+
+#settingsBtn {
+    margin: auto;
+    float: right;
+    background: url("assets/setting.png") center no-repeat white;
+}
+
+#reportInfoDetailsPopup {
+    position: absolute;
+    top: calc(100vh - 250px) !important;
+    width: 100%;
+    height: 210px;
+    padding: 10px;
+    background-color: white;
+    color: #333;
+    z-index: 400;
+}
+
+#reportInfoDetailsPopup span {
+    display: inline-block;
+}
+
+#reportInfoDetailsPopup span.status {
+    font-size: 1.2em;
+}
+
+#reportInfoDetailsPopup .description {
+    height: 100px;
+    overflow-y: scroll;
+}
+
+#rating {
+    font-weight: 600;
+}
+
+#reportInfoDetailsPopupRatingBlock {
+    margin-top: 10px;
+}
+
+.like {
+    background: url("./assets/like.png") center no-repeat;
+}
+
+.dislike {
+    background: url("./assets/dislike.png") center no-repeat;
+}
+
+.font-red {
+    color: red;
+}
+.font-green {
+    color: green;
+}
+.font-normal {
+    color: #333333;
+}
+
+.spinner {
+    position: absolute;
+    left: calc(100vw / 2 - 30px) !important;
+    top: calc(100vh / 2 - 36px) !important;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side,#474bff 94%,#0000) top/9px 9px no-repeat,
+    conic-gradient(#0000 30%,#474bff);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+    animation: spinner-c7wet2 1s infinite linear;
+    z-index: 9999;
+}
+
+@keyframes spinner-c7wet2 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+#reportInfoModal {
+    background: var(--tg-theme-bg-color);
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    bottom: 0;
+    z-index: 400;
+}
+
+.clear {
+    clear: both;
+}
+
+.check-btn {
+    background: url("./assets/check_green.png") center no-repeat lightgreen;
+}
+
+.cancel-btn {
+    background: url("./assets/close_red.png") center no-repeat;
+}
+
+#reportInfoBoxSendReport {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#reportInfoBoxCancelIconBtn {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#settingsModalBox {
+    padding: 10px;
+    z-index: 401;
+}
+
+.modal-window .cancel-btn {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#selectedMarkerTypeDesc {
+    margin-top: 10px;
+    content: " ";
+}
+
+#setMapMarkerHint {
+    position: absolute;
+    padding: 3px 10px;
+    bottom: 20px;
+    color: #444;
+    filter: drop-shadow(3px 3px 2px #000);
+    z-index: 400;
+}
+
+.h2 {
+    font-size: 1.3em;
+}
+
+.back-btn {
+    position: relative;
+    z-index: 410;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: var(--tg-theme-button-color);
+    background-color: gray;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+form {
+    margin: 0 10px;
+    margin-top: 10px;
+    width: calc(100vw - 20px);
+}
+
+.radiobox {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+
+}
+
+input[type="radio"] {
+    appearance: none;
+}
+
+input[type="radio"] + label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="radio"]:checked + label {
+    background: lightblue;
+    border-radius: 7px;
+}
+
+textarea {
+    margin-top: 10px;
+    width: 100%;
+}
