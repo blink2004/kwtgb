@@ -278,7 +278,7 @@ body {
 }
 
 .h2 {
-    color: var(--tg-theme-header-bg-color);
+    color: var(--tg-theme-text-color);
     font-size: 1.3em;
 }
 
