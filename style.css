@@ -247,6 +247,10 @@ body {
 }
 
 #settingsModalBox {
+    position: absolute;
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--tg-theme-bg-color);
     padding: 10px;
     z-index: 401;
 }
