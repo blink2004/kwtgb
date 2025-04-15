@@ -171,6 +171,7 @@ body {
 }
 
 #reportInfoDetailsPopupRatingBlock {
+    display: none; // Временно прячем блок с лайками/дизлайками. Добавится в одной из будущих версий
     margin-top: 10px;
 }
 
