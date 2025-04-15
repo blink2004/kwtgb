@@ -49,6 +49,7 @@
                         4: 'Блок-пост',
                     },
                     'EVENT_TYPE_IS_NOT_SELECTED': 'Необходимо выбрать тип события',
+                    'HEADER_ADDING_REPORT': 'Добавление',
                     'REPORT_DESCRIPTION_TEXT_LENGTH_NOT_CORRECT': 'Сообщения должно быть не менее ' + MIN_COUNT_SYMBOLS_FOR_REPORT_MSG + ' и не более ' + MAX_COUNT_SYMBOLS_FOR_REPORT_MSG + ' символов',
                 }
             ],
@@ -64,6 +65,10 @@
             } else {
                 $(el).css('background-color', 'white');
             }
+        }
+
+        function setTranslations() {
+            $('#reportInfoModal > .text-header-h2').text(i18n[userSettings.currentLang][0].HEADER_ADDING_REPORT);
         }
 
         // $(document).ready(function() {
@@ -219,6 +224,8 @@
                 $("#selectedMarkerTypeDesc").text( $(this).find("img").prop("alt") );
             });
 
+            setTranslations();
+
             // Анонимная функция внутри jQuery
             (function(){
                 // Init TWA
@@ -316,6 +323,7 @@
 
     <!-- Модальное окно сообщения о событии -->
     <div id="reportInfoModal" class="modal-window">
+        <span class="text-header-h2"></span>
         <input type="button" class="cancel-btn btn-rounded" id="reportInfoBoxCancelIconBtn" value="" />
 <!--        <input type="button" class="btn-rounded check-btn" id="reportInfoBoxSendReport" value="" />-->
         <div class="clear"></div>
@@ -612,13 +620,13 @@
     <script>eruda.init();</script>-->
 
     <!-- Unit tests block -->
-    <div id="qunit"></div>
+<!--    <div id="qunit"></div>
     <div id="qunit-fixture"></div>
     <link rel="stylesheet" href="css/qunit-dark-theme.css" />
     <link rel="stylesheet" href="css/test.css" />
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700' rel='stylesheet' >
     <script src="https://code.jquery.com/qunit/qunit-2.24.1.js"></script>
-    <script type="text/javascript" src="js/tests.js"></script>
+    <script type="text/javascript" src="js/tests.js"></script>-->
     <!-- End of Unit tests block -->
 
 </body>
