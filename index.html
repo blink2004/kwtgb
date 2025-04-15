@@ -93,6 +93,9 @@
                     $("#settingsBtn").hide(); // Скрываем кнопку "Настройки"
                     $("#setMapMarkerHint").show(); // Показываем подсказку пользователю о действиях
                     $("#reportInfoDetailsPopup").hide(); // Скрываем детали точки, если была открыта
+                    Telegram.WebApp.MainButton.hide(); // Прячем главную кнопку Telegram
+                    Telegram.WebApp.SecondaryButton.setParams({ text: i18n[userSettings.currentLang][0].CANCEL_BTN });
+                    Telegram.WebApp.SecondaryButton.show(); // Показываем второстепенную кнопку Telegram
                 }
                 isAddNewMarketBtnClicked = !isAddNewMarketBtnClicked; // Запоминаем статус кнопки
             });
@@ -258,12 +261,12 @@
                     $("#addNewMarkerBtn").trigger("click");
                 });
 
-                Telegram.WebApp.SecondaryButton.onClick( function(){
+                Telegram.WebApp.SecondaryButton.onClick( function(e){
                     if ( isAddNewMarketBtnClicked ) {
                         Telegram.WebApp.showAlert('DEBUG: Нажато для отмены отправки сообщения на сервер')
                         $('#reportInfoBoxCancelBtn').trigger('click');
 
-                        return;
+                        e.preventDefault();
                     }
                 });
 
