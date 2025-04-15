@@ -156,8 +156,9 @@ body {
     display: inline-block;
 }
 
-#reportInfoDetailsPopup span.status {
+#reportInfoDetailsPopup div.status {
     font-size: 1.2em;
+    margin-top: -8px;
 }
 
 #reportInfoDetailsPopup .description {
@@ -280,6 +281,7 @@ body {
     filter: drop-shadow(3px 3px 2px #000);
     z-index: 400;
 }
+
 
 .h2 {
     color: var(--tg-theme-text-color);
