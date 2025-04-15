@@ -598,6 +598,9 @@
 
             isAddNewMarketBtnClicked = false;
             setPressedBtn("#addNewMarkerBtn", false);
+
+            // Прячем кнопки Telegram
+            Telegram.WebApp.MainButton.hide();
         };
 
         map.on('click', onMapClick);
