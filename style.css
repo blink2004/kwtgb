@@ -159,6 +159,7 @@ body {
 #reportInfoDetailsPopup div.status {
     font-size: 1.2em;
     margin-top: -8px;
+    font-weight: 600;
 }
 
 #reportInfoDetailsPopup .description {
@@ -181,6 +182,14 @@ body {
 
 .dislike {
     background: url("./assets/dislike.png") center no-repeat;
+}
+
+.text-header-h2 {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 21px;
+    color: var(--tg-theme-text-color);
+    font-size: 1.3em;
 }
 
 .font-red {
